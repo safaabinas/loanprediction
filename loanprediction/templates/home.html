@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>HOME</title>
+    </head>
+    <style>
+    body{
+        background-color:black;
+        background-image:url(https://image.shutterstock.com/image-photo/linked-blocks-bank-world-currencies-600w-1926421151.jpg);
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size:cover ;
+    
+    }
+    </style>
+    <body>
+        <h1><center><b>LOAN PREDICTION</b></center></h1>
+
+        <form action="{% url 'result' %}" method="POST">
+
+        {% csrf_token %}
+
+        id:
+        <input type="text"  name="id">
+        <br><br>
+
+        Income:
+        <input type="text"  name="income" >
+        <br><br>
+
+        Age:
+        <input type="text"  name="age">
+        <br><br>
+
+        Experience:
+        <input type="text"  name="experience" >
+        <br><br>
+
+        Married/Single:
+        <select name="married/single">
+        <option value="1">Single</option>
+        <option value="0">Married</option>
+        </select>
+        <br><br>
+
+        House_Ownership:
+        <select name="house_ownership">
+        <option value="2">rented</option>
+        <option value="0">not rented</option>
+        </select>
+        <br><br>
+
+        Car_Ownership:
+        <select name="car_ownership">
+        <option value="1">yes</option>
+        <option value="0">no</option>
+        </select>
+        <br><br>
+
+        Profession	:
+        <select name="profession">
+        <option value="2">Architect	</option>
+        <option value="11">civi_servant</option>
+        <option value="18">Designer</option>
+        <option value="20">Economist	</option>
+        <option value="23">Financial_analyst</option>
+        <option value="25">Flight_attendant</option>
+        <option value="31">Librarian	</option>
+        <option value="33">Mechanical_engineer</option>
+        <option value="37">Physician	</option>
+        <option value="43">Software_Developer</option>
+        <option value="47">technical_writer</option>
+        </select>
+        <br><br>
+
+        CITY:
+        <select name="CITY">
+            <option value="0">Adoni</option>
+            <option value="1">Alappuza</option>
+            <option value="54">Bhubaneswar</option>
+            <option value="91">Erode[17]</option>
+            <option value="113">Hajipur[31]</option>
+            <option value="130">Jalgaon</option>
+            <option value="134">Jamnagar</option>
+            <option value="149">Karimnagar</option>
+            <option value="163">Kollam</option>
+            <option value="165">Kota[6]</option>
+            <option value="178">Madurai</option>
+            <option value="227">Parbhani</option>
+            <option value="251">Rewa	</option>
+            <option value="296">Tiruchirappalli[10]	</option>
+            <option value="299">Tiruppur</option>
+            
+            </select>
+            <br><br>
+    
+        
+
+        STATE:
+        <select name="state">
+            <option value="0">Andhra_Pradesh</option>
+            <option value="2">Bihar</option>
+            <option value="6">Gujarat</option>
+            <option value="12">Kerala</option>
+            <option value="13">Madhya_Pradesh</option>
+            <option value="14">Maharashtra</option>
+            <option value="17">Odisha</option>
+            <option value="20">Rajasthan</option>
+            <option value="22">Tamil_Nadu</option>
+            <option value="23">Telangana</option>
+            </select>
+            <br><br>
+
+        CURRENT_JOB_YRS	:
+        <input type="text"  name="CURRENT_JOB_YRS" required>
+        <br><br>
+
+        CURRENT_HOUSE_YRS	:
+        <input type="text"  name="CURRENT_HOUSE_YRS" required>
+        <br><br>
+        
+
+    <input type="submit" name="predict" value="predict">
+    <br><br>
+
+    
+    </form> 
+    </body>
+    </html>
